@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animaciones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame_0_delay-0.04s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="51J-Ol-3R2">
+                                <rect key="frame" x="16" y="93" width="288" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-I7-QsM">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Desvanecer" id="43M-37-GBF">
+                                        <connections>
+                                            <action selector="Desvanecer:" destination="BYZ-38-t0r" id="46s-83-VoY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Ct-nS-iEf"/>
+                                    <barButtonItem title="Deslizar" id="CoR-7l-hs8">
+                                        <connections>
+                                            <action selector="Deslizar:" destination="BYZ-38-t0r" id="AlO-YB-ZJ1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5sY-QK-1he"/>
+                                    <barButtonItem title="Agrandar" id="KpX-MJ-1sd">
+                                        <connections>
+                                            <action selector="Agrandar:" destination="BYZ-38-t0r" id="vNS-Q6-d0n"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x45-LF-Szf">
+                                <rect key="frame" x="243" y="473" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Circulo"/>
+                                <connections>
+                                    <segue destination="E3u-xE-WDv" kind="show" id="BVB-VM-jBn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-0M-9t4">
+                                <rect key="frame" x="140" y="20" width="41" height="30"/>
+                                <state key="normal" title="Iniciar"/>
+                                <connections>
+                                    <action selector="siguiente:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCs-A9-gIG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yKs-0M-9t4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="P3t-cr-S43"/>
+                            <constraint firstItem="yKs-0M-9t4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m8T-c4-shU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botonIniciar" destination="yKs-0M-9t4" id="nQc-4E-paZ"/>
+                        <outlet property="imageView" destination="51J-Ol-3R2" id="WtG-gM-ra4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73.125" y="167.95774647887325"/>
+        </scene>
+        <!--Circulito-->
+        <scene sceneID="lNI-DR-svx">
+            <objects>
+                <viewController id="E3u-xE-WDv" customClass="Circulito" customModule="Animaciones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GBO-BT-1dX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wxd-PF-FGT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kQW-q2-1OY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rq-Po-PPa">
+                                <rect key="frame" x="16" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="regresar:" destination="E3u-xE-WDv" eventType="touchUpInside" id="m6m-ZT-kPe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-8u-sIZ">
+                                <rect key="frame" x="16" y="410" width="107" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HRJ-Gj-N6n"/>
+                                    <constraint firstAttribute="width" secondItem="Wcc-8u-sIZ" secondAttribute="height" multiplier="107:92" id="J5S-Fl-Fzx"/>
+                                </constraints>
+                                <state key="normal" image="circulo.png"/>
+                                <connections>
+                                    <action selector="mueveFigura:" destination="E3u-xE-WDv" eventType="touchUpInside" id="0tC-mh-IlD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="circulo" destination="Wcc-8u-sIZ" id="nrF-sc-tvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsg-Yu-cEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.375" y="167.95774647887325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circulo.png" width="214" height="214"/>
+        <image name="frame_0_delay-0.04s.gif" width="540" height="540"/>
+    </resources>
+</document>
